@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+
+        <div id="app">
+            <h1>{{ message }}</h1>
+            <p></p>
+            <button @click="reverseMessage">Reverse Message</button>
+            <p></p>
+            <button @click="message += '!'">Append "!"</button>
+            <p></p>
+            <a href="https://vuejs.org" @click.prevent="notify">
+                A link with e.preventDefault()
+            </a>
+        </div>
+
+    </body>
+
+    <script type="module">
+        Vue.createApp({
+            data() {
+                return {
+                    message: 'hi hi hi'
+                }
+            },
+        }).mount('#app');
+    </script>
+
+</html>
