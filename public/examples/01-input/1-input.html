@@ -10,26 +10,51 @@
     <body>
 
         <div id="app">
+            <!--声明式渲染-->
             <h1>{{ message }}</h1>
             <p></p>
+
+            <!--字符串反转-->
             <button @click="reverseMessage">Reverse Message</button>
             <p></p>
+
+            <!--append字符串追加-->
             <button @click="message += '!'">Append "!"</button>
             <p></p>
             <a href="https://vuejs.org" @click.prevent="notify">
                 A link with e.preventDefault()
             </a>
+
+            <p></p>
+            <div id="counter">
+                Counter: {{ counter }}
+            </div>
+
         </div>
 
     </body>
 
-    <script type="module">
+    <script>
         Vue.createApp({
             data() {
                 return {
-                    message: 'hi hi hi'
+                    message: 'hi hi hi',
+                    counter: 1
                 }
             },
+            mounted() {
+                setInterval(() => {
+                    this.counter++;
+                }, 1000);
+            },
+            methods: {
+                reverseMessage() {
+                    this.message = this.message.split('').reverse().join('');
+                },
+                notify() {
+                    alert('navigation was prevented.')
+                }
+            }
         }).mount('#app');
     </script>
 
