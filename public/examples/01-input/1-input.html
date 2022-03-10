@@ -42,10 +42,16 @@
             </div>
             <p></p>
 
-            <!--双向绑定-->
+            <!--双向绑定(表单输入与应用状态双向绑定)-->
             <div id="two-way-binding">
                 <p>{{ twoWayBindingMessage }}</p>
                 <input v-model="twoWayBindingMessage"/>
+            </div>
+            <p></p>
+
+            <!--条件判断-->
+            <div id="conditional-rendering">
+                <span v-if="seen">现在你能看到我</span>
             </div>
 
         </div>
@@ -59,7 +65,8 @@
                     message: 'hi hi hi',
                     counter: 1,
                     bindAttributeMessage: '当前时间：' + new Date().toLocaleString(),
-                    twoWayBindingMessage: 'Hello vue'
+                    twoWayBindingMessage: 'Hello vue',
+                    seen: true
                 }
             },
             mounted() {
