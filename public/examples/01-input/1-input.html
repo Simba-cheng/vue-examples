@@ -42,6 +42,12 @@
             </div>
             <p></p>
 
+            <!--双向绑定-->
+            <div id="two-way-binding">
+                <p>{{ twoWayBindingMessage }}</p>
+                <input v-model="twoWayBindingMessage"/>
+            </div>
+
         </div>
 
     </body>
@@ -52,7 +58,8 @@
                 return {
                     message: 'hi hi hi',
                     counter: 1,
-                    bindAttributeMessage: '当前时间：' + new Date().toLocaleString()
+                    bindAttributeMessage: '当前时间：' + new Date().toLocaleString(),
+                    twoWayBindingMessage: 'Hello vue'
                 }
             },
             mounted() {
