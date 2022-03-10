@@ -21,14 +21,26 @@
             <!--append字符串追加-->
             <button @click="message += '!'">Append "!"</button>
             <p></p>
+
+            <!--点击弹窗-->
             <a href="https://vuejs.org" @click.prevent="notify">
                 A link with e.preventDefault()
             </a>
-
             <p></p>
+
+            <!--每秒递增-->
             <div id="counter">
                 Counter: {{ counter }}
             </div>
+            <p></p>
+
+            <!--鼠标悬停-->
+            <div id="bind-attribute">
+                <span v-bind:title="bindAttributeMessage">
+                    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+                </span>
+            </div>
+            <p></p>
 
         </div>
 
@@ -39,7 +51,8 @@
             data() {
                 return {
                     message: 'hi hi hi',
-                    counter: 1
+                    counter: 1,
+                    bindAttributeMessage: '当前时间：' + new Date().toLocaleString()
                 }
             },
             mounted() {
