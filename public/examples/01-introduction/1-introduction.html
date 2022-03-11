@@ -53,6 +53,7 @@
             <div id="conditional-rendering">
                 <span v-if="seen">现在你能看到我</span>
             </div>
+            <button @click="showOrHide">显示、隐藏</button>
             <p></p>
 
             <!--循环（列表）-->
@@ -96,7 +97,10 @@
                 },
                 notify() {
                     alert('navigation was prevented.')
-                }
+                },
+                showOrHide() {
+                    this.seen = !this.seen;
+                },
             }
         }).mount('#app');
     </script>
