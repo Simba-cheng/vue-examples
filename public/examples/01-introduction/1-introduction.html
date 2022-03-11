@@ -53,6 +53,17 @@
             <div id="conditional-rendering">
                 <span v-if="seen">现在你能看到我</span>
             </div>
+            <p></p>
+
+            <!--循环（列表）-->
+            <div id="list-rendering">
+                <ol>
+                    <li v-for="todo in todos">
+                        {{ todo.text }}
+                    </li>
+                </ol>
+            </div>
+            <p></p>
 
         </div>
 
@@ -66,7 +77,12 @@
                     counter: 1,
                     bindAttributeMessage: '当前时间：' + new Date().toLocaleString(),
                     twoWayBindingMessage: 'Hello vue',
-                    seen: true
+                    seen: true,
+                    todos: [
+                        {text: 'Learn JavaScript'},
+                        {text: 'Learn Vue'},
+                        {text: 'Build something awesome'}
+                    ]
                 }
             },
             mounted() {
