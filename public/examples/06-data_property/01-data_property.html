@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <script type="importmap">
+  { "imports": {
+    "vue":        "https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0-beta.14/vue.esm-browser.js",
+    "vue-router": "https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.0.0-alpha.12/vue-router.esm.js",
+    "vuex":       "https://cdnjs.cloudflare.com/ajax/libs/vuex/4.0.0-beta.2/vuex.esm-browser.js"
+  } }
+    </script>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+        <div id="app">
+            Counter: {{ counter }}
+        </div>
+    </body>
+
+    <script type="module">
+       const app = Vue.createApp({
+            data() {
+                return {
+                    counter: 1
+                }
+            },
+        });
+
+       const vm = app.mount('#app')
+       console.log(vm.$data.counter)
+       console.log(vm.counter)
+    </script>
+
+</html>
