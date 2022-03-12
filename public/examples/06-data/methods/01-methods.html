@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <!--
+        https://v3.cn.vuejs.org/guide/data-methods.html#%E6%96%B9%E6%B3%95
+    -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+        <div id="app">
+            Counter: {{ counter }}
+
+            <p></p>
+
+            <button @click="increment">点击我试试呢</button>
+        </div>
+    </body>
+
+    <!--
+        可以通过 methods属性，向组建实例中添加方法。
+        Vue会为methods属性自动绑定'this'
+
+        在模板中，methods 通常与事件监听一起使用，点击 button按钮，可以动态增加counter值。
+    -->
+    <script type="module">
+        const app = Vue.createApp({
+            data() {
+                return {
+                    counter: 0
+                }
+            },
+            methods: {
+                increment() {
+                    this.counter++;
+                },
+            }
+        });
+
+        const vm = app.mount('#app');
+
+        // 1（data函数中设置的初始值）
+        console.log('counter:' + vm.$data.counter)
+
+        // 调用methods函数中的 increment 方法
+        vm.increment();
+
+        console.log('counter:' + vm.counter);
+
+    </script>
+
+</html>
