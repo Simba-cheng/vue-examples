@@ -24,6 +24,10 @@
         </div>
     </body>
 
+    <!--
+        data函数，Vue在创建组件实例的过程中调用此函数。
+        它会返回一个对象，Vue会以'$data'形式存储在组建实例中。
+    -->
     <script type="module">
         const app = Vue.createApp({
             data() {
@@ -34,8 +38,18 @@
         });
 
         const vm = app.mount('#app')
+
+        // 1,(data函数中设置的初始值)
         console.log(vm.$data.counter)
         console.log(vm.counter)
+
+        // 修改vm.counter,会同步更新
+        vm.counter = 5;
+        console.log(vm.$data.counter);
+
+        vm.$data.counter = 7;
+        console.log(vm.$data.counter);
+
     </script>
 
 </html>
