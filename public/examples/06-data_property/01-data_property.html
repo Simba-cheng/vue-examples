@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Vue</title>
+        <!--
+        https://v3.cn.vuejs.org/guide/data-methods.html#data-property
+        -->
     </head>
 
     <script type="importmap">
@@ -22,7 +25,7 @@
     </body>
 
     <script type="module">
-       const app = Vue.createApp({
+        const app = Vue.createApp({
             data() {
                 return {
                     counter: 1
@@ -30,9 +33,9 @@
             },
         });
 
-       const vm = app.mount('#app')
-       console.log(vm.$data.counter)
-       console.log(vm.counter)
+        const vm = app.mount('#app')
+        console.log(vm.$data.counter)
+        console.log(vm.counter)
     </script>
 
 </html>
