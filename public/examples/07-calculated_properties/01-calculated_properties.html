@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <!--
+        https://v3.cn.vuejs.org/guide/computed.html#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7
+    -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+        <div id="app">
+            <div id="computed-basics">
+                <p>出版了以下书籍：</p>
+                <span>{{ author.books.length > 0 ? 'yes' : 'no' }}</span>
+
+                <ul v-if="author.books.length > 0">
+                    <li v-for="book of author.books">{{ book }}</li>
+                </ul>
+
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<!--
+    计算属性和监听器
+-->
+<script type="module">
+    Vue.createApp({
+        data() {
+            return {
+                author: {
+                    name: 'John Doe',
+                    books: [
+                        //'Vue 2 - Advanced Guide',
+                        //'Vue 3 - Basic Guide',
+                        //'Vue 4 - The Mystery'
+                    ]
+                },
+            }
+        },
+    }).mount('#app');
+</script>
