@@ -13,14 +13,14 @@
 
     <body>
         <div id="app">
-            <!--<div id="computed-basics">
+            <div id="computed-basics">
                 <p>出版了以下书籍：</p>
                 <span>{{ author.books.length > 0 ? 'yes' : 'no' }}</span>
 
                 <ul v-if="author.books.length > 0">
                     <li v-for="book of author.books">{{ book }}</li>
                 </ul>
-            </div>-->
+            </div>
 
             <div id="computed-basics2">
                 <p>出版了以下书籍：</p>
@@ -35,7 +35,10 @@
 <!--
     计算属性和监听器
 
-    如果将业务逻辑写在html标签(模板)中，虽然可以，但是你必须得看html+js代码才能理清具体业务，如：#computed-basics 示例。
+    如：#computed-basics 示例。
+    如果将业务逻辑写在html标签(模板)中，虽然可以，但是你必须得看html+js代码才能理解具体业务，如果模板中包含多次计算，那就会变得很糟。
+
+    可以使用'计算属性'方式，将任何包含响应式数据的逻辑从模板抽离。如 publishedBooksMessage示例。
 -->
 <script type="module">
     Vue.createApp({
