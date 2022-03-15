@@ -25,8 +25,16 @@
 
             <p></p>
 
+            <!--内联处理器中的方法-->
             <div>
                 <button @click="saySomething('simba')">说点什么呢</button>
+            </div>
+
+            <p></p>
+
+            <!--原生事件-->
+            <div>
+                <button @click="sayWarn('Form cannot be submitted yet.', $event)">访问原生事件</button>
             </div>
 
         </div>
@@ -47,7 +55,14 @@
                     console.log(this.consoleCounter)
                 },
                 saySomething(message) {
-                    console.log('say :' + message);
+                    console.log('say: ' + message);
+                },
+                sayWarn(message, event) {
+                    if (event) {
+                        event.preventDefault()
+                        console.log(event)
+                    }
+                    console.log('warn: ' + message)
                 },
             }
         }).mount('#app');
