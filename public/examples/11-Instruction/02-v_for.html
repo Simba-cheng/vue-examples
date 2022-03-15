@@ -48,6 +48,23 @@
                 <li v-for="(value,name,index) in myObjects">{{ index }} - {{ name }} : {{ value }}</li>
             </ul>
 
+            <div id="programObjects">
+                <div v-for="(program,index) in programs" :key="program.id" :id="program.id">
+                    {{ index }} - {{ program.id }} - {{ program.desc }}
+                </div>
+            </div>
+
+            <p></p>
+
+            <div id="programObjects2">
+                <div v-for="program in programs" :key="program.id" :id="program.id">
+                    <div v-for="(pVal,name,index) in program">
+                        {{index}} - {{ name }} - {{ pVal }}
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+
         </div>
     </body>
 
@@ -65,7 +82,27 @@
                         title: 'How to do lists in Vue',
                         author: 'Jane Doe',
                         publishedAt: '2016-04-10'
-                    }
+                    },
+                    programs: [
+                        {
+                            id: '622bf5014d6d6b1c19a73877',
+                            appId: 'h97',
+                            carModel: '岚图',
+                            sdkVer: '0.0.1',
+                            desc: '岚图测试数据',
+                            createTime: '2022-03-12 09:18:57',
+                            modifyTime: '2022-03-12 09:18:57'
+                        },
+                        {
+                            id: '622bf5484d6d6b1c19a7387b',
+                            appId: 'h97a',
+                            carModel: '沃尔沃',
+                            sdkVer: '0.0.1',
+                            desc: '沃尔沃是什么呢',
+                            createTime: '2022-03-12 09:20:08',
+                            modifyTime: '2022-03-12 09:21:37'
+                        }
+                    ]
                 }
             },
         }).mount('#app');
