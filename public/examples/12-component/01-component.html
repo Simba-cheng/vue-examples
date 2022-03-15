@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+        <div id="components-demo">
+            <button-counter></button-counter>
+        </div>
+    </body>
+
+    <script type="module">
+        const app = Vue.createApp({});
+        //定义一个全局组件（计算属性）
+        app.component('button-counter', {
+            data() {
+                return {
+                    count: 0,
+                }
+            },
+            template: `
+              <button @click="count++">
+              你点击了{{ count }}次
+              </button>`
+        });
+        app.mount('#components-demo')
+    </script>
+
+</html>
