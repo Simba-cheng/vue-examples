@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+        <div id="app">
+            <!--
+                v-for 指令需要使用 item in items 形式的特殊语法。
+                其中 items 是源数据数组，而 item 则是被迭代的数组元素的别名。
+            -->
+            <ul id="array-rendering">
+                <li v-for="item in items">{{ item.message }}</li>
+            </ul>
+
+            <p></p>
+
+            <!--
+                在 v-for 块中，我们可以访问所有父作用域的 property。
+                v-for 还支持一个可选的第二个参数，即当前项的索引。
+            -->
+            <ul id="array-rendering-index">
+                <li v-for="(item,index) in items">{{ index }} - {{ address }} - {{ item.message }}</li>
+            </ul>
+
+            <p></p>
+
+            <!--遍历对象-->
+            <ul id="forObject">
+                <li v-for="value in myObjects">{{ value }}</li>
+            </ul>
+
+            <p></p>
+
+            <!--提供第二个的参数为 property 名称 (也就是键名 key)-->
+            <ul id="forObject2">
+                <li v-for="(value,name) in myObjects">{{ name }} : {{ value }}</li>
+            </ul>
+
+            <p></p>
+
+            <!--用第三个参数作为索引-->
+            <ul id="forObject3">
+                <li v-for="(value,name,index) in myObjects">{{ index }} - {{ name }} : {{ value }}</li>
+            </ul>
+
+        </div>
+    </body>
+
+    <script type="module">
+        Vue.createApp({
+            data() {
+                return {
+                    address: 'nanjing',
+                    items: [
+                        {message: 'ccc'},
+                        {message: 'aaa'},
+                        {message: 'ddd'},
+                    ],
+                    myObjects: {
+                        title: 'How to do lists in Vue',
+                        author: 'Jane Doe',
+                        publishedAt: '2016-04-10'
+                    }
+                }
+            },
+        }).mount('#app');
+    </script>
+
+</html>
