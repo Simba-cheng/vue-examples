@@ -37,6 +37,13 @@
                 <button @click="sayWarn('Form cannot be submitted yet.', $event)">访问原生事件</button>
             </div>
 
+            <p></p>
+
+            <!--绑定多个事件-->
+            <div>
+                <button @click="processOne($event),processTwo($event)">多个事件</button>
+            </div>
+
         </div>
 
     </body>
@@ -63,6 +70,12 @@
                         console.log(event)
                     }
                     console.log('warn: ' + message)
+                },
+                processOne(event) {
+                    console.log('process one')
+                },
+                processTwo(event) {
+                    console.log('process two')
                 },
             }
         }).mount('#app');
