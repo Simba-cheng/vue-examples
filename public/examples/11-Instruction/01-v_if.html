@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+        <div id="app">
+            <h1 v-if="awesome">Vue is awesome!</h1>
+            <h1 v-else>哈哈哈哈</h1>
+            <p></p>
+
+            <button @click="awesomeClick">点我试试看</button>
+            <p></p>
+
+            <div>
+                <template v-if="templateAwesome">
+                    <h1>Title</h1>
+                    <p>Paragraph 1</p>
+                    <p>Paragraph 2</p>
+                </template>
+                <button @click="templateAwesomeClick">点我试试看2</button>
+            </div>
+        </div>
+    </body>
+
+    <script type="module">
+        Vue.createApp({
+            data() {
+                return {
+                    awesome: true,
+                    templateAwesome: false
+                }
+            },
+            methods: {
+                awesomeClick() {
+                    this.awesome = !this.awesome;
+                },
+                templateAwesomeClick() {
+                    this.templateAwesome = !this.templateAwesome;
+                },
+            }
+        }).mount('#app');
+    </script>
+
+</html>
