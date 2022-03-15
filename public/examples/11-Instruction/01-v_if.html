@@ -9,11 +9,12 @@
 
     <body>
         <div id="app">
-            <h1 v-if="awesome">Vue is awesome!</h1>
-            <h1 v-else>哈哈哈哈</h1>
-            <p></p>
-
-            <button @click="awesomeClick">点我试试看</button>
+            <div>
+                <h1 v-if="awesome">Vue is awesome!</h1>
+                <h1 v-else>哈哈哈哈</h1>
+                <p></p>
+                <button @click="awesomeClick">点我试试看</button>
+            </div>
             <p></p>
 
             <div>
@@ -24,6 +25,20 @@
                 </template>
                 <button @click="templateAwesomeClick">点我试试看2</button>
             </div>
+            <p></p>
+
+            <div>
+                <div v-if="random > 0.5">
+                    Now you see me
+                </div>
+                <div v-else>
+                    now you don't
+                </div>
+                <button @click="randomClick">点我试试看3</button>
+            </div>
+            <p></p>
+
+
         </div>
     </body>
 
@@ -32,7 +47,8 @@
             data() {
                 return {
                     awesome: true,
-                    templateAwesome: false
+                    templateAwesome: false,
+                    random: 0,
                 }
             },
             methods: {
@@ -41,6 +57,10 @@
                 },
                 templateAwesomeClick() {
                     this.templateAwesome = !this.templateAwesome;
+                },
+                randomClick() {
+                    this.random = Math.random();
+                    console.log('random: ' + this.random);
                 },
             }
         }).mount('#app');
