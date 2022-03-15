@@ -10,12 +10,34 @@
     <body>
         <div id="app">
 
+            <!--文本-->
+            <div>
+                <input v-model="message" placeholder="试试修改它">
+                <p>message: {{ message }}</p>
+            </div>
+
+            <p></p>
+
+            <!--多行文本-->
+            <div>
+                <span>多行文本</span>
+                <p style="white-space: pre-line">{{ multilineMessage }}</p>
+                <br/>
+                <textarea v-model="multilineMessage" placeholder="多行文本"></textarea>
+            </div>
+
+
         </div>
     </body>
 
     <script type="module">
         Vue.createApp({
-
+            data() {
+                return {
+                    message: '',
+                    multilineMessage: ''
+                }
+            },
         }).mount('#app');
     </script>
 
