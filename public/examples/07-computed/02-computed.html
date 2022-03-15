@@ -33,12 +33,12 @@
             },
             computed: {
                 // 计算得出最终结果
-                fullName() {
-                    return this.firstName + ' ' + this.lastName;
-                },
-                //fullName: function () {
+                //fullName() {
                 //    return this.firstName + ' ' + this.lastName;
                 //},
+                fullName: function () {
+                    return this.firstName + ' ' + this.lastName;
+                },
             }
         }).mount('#app');
     </script>
