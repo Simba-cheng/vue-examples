@@ -27,6 +27,7 @@
             </div>
             <p></p>
 
+            <!-- v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。-->
             <div>
                 <div v-if="random > 0.5">
                     Now you see me
@@ -37,6 +38,19 @@
                 <button @click="randomClick">点我试试看3</button>
             </div>
             <p></p>
+
+            <div>
+                <div v-if="random2 < 0.3">
+                    random2大于0,小于0.3,值等于={{ random2 }}
+                </div>
+                <div v-else-if="random2 < 0.6">
+                    random2大于0.3,小于0.6,值等于={{ random2 }}
+                </div>
+                <div v-else>
+                    random2值大于0.6,值等于={{ random2 }}
+                </div>
+                <button @click="randomClick2">点我试试看4</button>
+            </div>
 
 
         </div>
@@ -49,6 +63,7 @@
                     awesome: true,
                     templateAwesome: false,
                     random: 0,
+                    random2: 0
                 }
             },
             methods: {
@@ -61,6 +76,10 @@
                 randomClick() {
                     this.random = Math.random();
                     console.log('random: ' + this.random);
+                },
+                randomClick2() {
+                    this.random2 = Math.random();
+                    console.log('random2: ' + this.random2);
                 },
             }
         }).mount('#app');
