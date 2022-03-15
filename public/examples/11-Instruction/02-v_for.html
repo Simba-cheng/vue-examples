@@ -48,6 +48,7 @@
                 <li v-for="(value,name,index) in myObjects">{{ index }} - {{ name }} : {{ value }}</li>
             </ul>
 
+            <!--循环对象列表-->
             <div id="programObjects">
                 <div v-for="(program,index) in programs" :key="program.id" :id="program.id">
                     {{ index }} - {{ program.id }} - {{ program.desc }}
@@ -56,6 +57,7 @@
 
             <p></p>
 
+            <!--循环对象列表，再循环每个对象中的属性-->
             <div id="programObjects2">
                 <div v-for="program in programs" :key="program.id" :id="program.id">
                     <div v-for="(pVal,name,index) in program">
@@ -64,6 +66,8 @@
                     <p></p>
                 </div>
             </div>
+
+            <!--TODO 在组件中使用循环 学习完组件后再回头-->
 
         </div>
     </body>
