@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <body>
+
+        <!--将点击的业务处理写在模板中-->
+        <div id="app">
+            <div>
+                <button @click="counter += 1">加1</button>
+                <p>The button above has been clicked {{ counter }} times.</p>
+            </div>
+
+            <p></p>
+
+            <!--抽离事件方法-->
+            <div>
+                <button @click="printConsole">printConsole</button>
+            </div>
+
+            <p></p>
+
+            <div>
+                <button @click="saySomething('simba')">说点什么呢</button>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script type="module">
+        Vue.createApp({
+            data() {
+                return {
+                    counter: 0,
+                    consoleCounter: 0
+                }
+            },
+            methods: {
+                printConsole() {
+                    this.consoleCounter += 1;
+                    console.log(this.consoleCounter)
+                },
+                saySomething(message) {
+                    console.log('say :' + message);
+                },
+            }
+        }).mount('#app');
+    </script>
+
+</html>
