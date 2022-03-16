@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue</title>
+    </head>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!--<body>
+        <div id="app">
+            <blog-post title="My journey with Vue"></blog-post>
+        </div>
+    </body>
+    <script type="module">
+        const app = Vue.createApp({});
+        app.component('blog-post', {
+            props: ['title'],
+            template: `<h1>{{ title }}</h1>`
+        });
+        app.mount('#app')
+    </script>-->
+
+    <body>
+        <div id="blog-posts-events-demo" class="demo">
+            <div :style="{ fontSize:postFontSize + 'em'}">
+                <blog-post v-for="post in posts" :key="post.id" :title="post.title"
+                           @enlarge-text="postFontSize += 0.1"></blog-post>
+            </div>
+        </div>
+    </body>
+
+    <script type="module">
+        const app = Vue.createApp({
+            data() {
+                return {
+                    posts: [
+                        {id: 1, title: 'My journey with Vue'},
+                        {id: 2, title: 'Blogging with Vue'},
+                        {id: 3, title: 'Why Vue is so fun'}
+                    ],
+                    postFontSize: 1
+                }
+            },
+        });
+
+        //为每行文本添加一个按钮
+        app.component('blog-post', {
+            props: ['title'],
+            template: `
+              <div class="blog-post">
+              <h4>{{ title }}</h4>
+              <button @click="$emit('enlargeText')">点我试试</button>
+              </div>`
+        })
+
+        app.mount('#blog-posts-events-demo');
+    </script>
+
+</html>
