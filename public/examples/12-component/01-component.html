@@ -10,12 +10,22 @@
     <body>
         <div id="components-demo">
             <button-counter></button-counter>
+
+            <!--
+                复用
+                当点击按钮时，每个组件都会各自独立维护它的count
+            -->
+            <button-counter></button-counter>
+            <button-counter></button-counter>
         </div>
     </body>
 
     <script type="module">
         const app = Vue.createApp({});
-        //定义一个全局组件（计算属性）
+        /*
+            组件是带有名称的可复用实例。
+            此例子中是<button-counter>，可以把这个组件作为一个根实例中的自定义元素来使用
+         */
         app.component('button-counter', {
             data() {
                 return {
