@@ -8,20 +8,25 @@
     <script src="https://unpkg.com/vue@next"></script>
 
     <body>
-        <div id="blog-post-demo" class="demo">
-            <blog-post title="My journey with Vue"></blog-post>
-            <blog-post title="Blogging with Vue"></blog-post>
-            <blog-post title="Why Vue is so fun"></blog-post>
+        <div id="app">
+            <my-component></my-component>
         </div>
     </body>
 
     <script type="module">
         const app = Vue.createApp({});
-        app.component('blog-post', {
-            props: ['title'],
-            template: `<h4>{{ title }}</h4>`
+
+        app.component('my-component', {
+            data() {
+                return {
+                    name: 'simba'
+                }
+            },
+            template: `
+              <div>hello {{ name }}</div>`
         });
-        app.mount('#blog-post-demo');
+
+        app.mount('#app')
     </script>
 
 </html>

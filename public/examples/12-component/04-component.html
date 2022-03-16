@@ -15,7 +15,7 @@
 
     <script type="module">
 
-        const app = Vue.createApp({
+        const App = {
             data() {
                 return {
                     posts: [
@@ -25,7 +25,9 @@
                     ]
                 }
             },
-        });
+        }
+
+        const app = Vue.createApp(App);
 
         app.component('blog-post', {
             props: ['title'],
