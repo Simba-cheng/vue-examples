@@ -18,8 +18,12 @@
 
     <div id="posts-events-demo">
         <div :style="{fontSize:postsFontSize+'em'}">
+            <!--<prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
+                                  @enlarge-text="postsFontSize+=0.1"></prop-transmit-data04>-->
+
+            <!--1.使用时间抛出一个值-->
             <prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
-                                  @enlarge-text="postsFontSize+=0.1"></prop-transmit-data04>
+                                  @enlarge-text="postsFontSize+=$event"></prop-transmit-data04>
         </div>
     </div>
 

@@ -1,7 +1,11 @@
 <template>
     <div class="propTransmitData04-post">
         <h4>{{ title }}</h4>
-        <button @click="$emit('enlargeText')">点我试试</button>
+
+        <!--<button @click="$emit('enlargeText')">点我试试</button>-->
+
+        <!--1. 抛出值-->
+        <button @click="$emit('enlargeText',0.1)">点我试试</button>
     </div>
 </template>
 
