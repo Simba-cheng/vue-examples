@@ -36,14 +36,14 @@
 
 <script>
     import HelloWorld2 from "@/components/HelloWorld2.vue";
-    import simpleComponent01 from "@/components/SimpleComponent01.vue";
-    import propTransmitData01 from "@/components/PropTransmitData01.vue";
-    import propTransmitData02 from "@/components/PropTransmitData02.vue";
-    import propTransmitData03 from "@/components/PropTransmitData03.vue";
-    import propTransmitData04 from "@/components/PropTransmitData04.vue";
+    import simpleComponent01 from "@/components/childComponents01/SimpleComponent01.vue";
+    import propTransmitData01 from "@/components/childComponents01/PropTransmitData01.vue";
+    import propTransmitData02 from "@/components/childComponents01/PropTransmitData02.vue";
+    import propTransmitData03 from "@/components/childComponents01/PropTransmitData03.vue";
+    import propTransmitData04 from "@/components/childComponents01/PropTransmitData04.vue";
 
     export default {
-        name: 'testApp',
+        name: 'appComponentTest01',
         components: {
             HelloWorld2,
 

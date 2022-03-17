@@ -6,8 +6,8 @@
 
 import {createApp} from "vue";
 
-//import componentAppTest01 from "./ComponentAppTest01.vue";
-import componentAppTest02 from "@/components/ComponentAppTest02.vue";
+//import appComponentTest01 from "./AppComponentTest01.vue";
+import appComponentTest02 from "@/AppComponentTest02.vue";
 
-//createApp(componentAppTest01).mount('#app')
-createApp(componentAppTest02).mount('#app')
+//createApp(appComponentTest01).mount('#app')
+createApp(appComponentTest02).mount('#app')
