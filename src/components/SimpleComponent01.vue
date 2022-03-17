@@ -1,16 +1,12 @@
 <template>
     <div>
         <p class="greeting"> {{ greeting }}</p>
-        <h1>{{ msg }}</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'simpleComponent',
-        props: {
-            msg: String
-        },
+        name: 'simpleComponent01',
         data() {
             return {
                 greeting: '你好？我不好'
