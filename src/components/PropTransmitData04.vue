@@ -4,7 +4,10 @@
 
         <!--<button @click="$emit('enlargeText')">点我试试</button>-->
 
-        <!--1. 通过第二个参数抛出值-->
+        <!--1. 通过第二个参数,子组件向父组件反向传值-->
+        <!--<button @click="$emit('enlargeText',0.1)">点我试试</button>-->
+
+        <!--2.-->
         <button @click="$emit('enlargeText',0.1)">点我试试</button>
     </div>
 </template>

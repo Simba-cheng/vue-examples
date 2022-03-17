@@ -21,9 +21,14 @@
             <!--<prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
                                   @enlarge-text="postsFontSize+=0.1"></prop-transmit-data04>-->
 
-            <!--1.使用事件抛出一个值-->
+            <!--1.接收从子组件传递的参数-->
+            <!--<prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
+                                  @enlarge-text="postsFontSize+=$event"></prop-transmit-data04>-->
+
+            <!--2.接收从子组件传递的参数,并将其传入绑定的函数-->
             <prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
-                                  @enlarge-text="postsFontSize+=$event"></prop-transmit-data04>
+                                  @enlarge-text="onEnlargeText"></prop-transmit-data04>
+
         </div>
     </div>
 
@@ -64,7 +69,11 @@
                 ],
                 postsFontSize: 1
             }
-        },
+        }, methods: {
+            onEnlargeText(enlargeAmount) {
+                this.postsFontSize += enlargeAmount;
+            },
+        }
     }
 </script>
 
