@@ -14,6 +14,15 @@
                               :title="bookTitle.title"></prop-transmit-data03>
     </div>
 
+    <p></p>
+
+    <div id="posts-events-demo">
+        <div :style="{fontSize:postsFontSize+'em'}">
+            <prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
+                                  @enlarge-text="postsFontSize+=0.1"></prop-transmit-data04>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -22,6 +31,7 @@
     import propTransmitData01 from "@/components/PropTransmitData01.vue";
     import propTransmitData02 from "@/components/PropTransmitData02.vue";
     import propTransmitData03 from "@/components/PropTransmitData03.vue";
+    import propTransmitData04 from "@/components/PropTransmitData04.vue";
 
     export default {
         name: 'testApp',
@@ -33,7 +43,8 @@
             // 组件 - 传递数据
             propTransmitData01,
             propTransmitData02,
-            propTransmitData03
+            propTransmitData03,
+            propTransmitData04
         },
         data() {
             return {
@@ -41,7 +52,13 @@
                     {id: '1', title: '22 My journey with Vue'},
                     {id: '2', title: '22 Blogging with Vue'},
                     {id: '3', title: '22 Why Vue is so fun'}
-                ]
+                ],
+                posts: [
+                    {id: '1', title: '66 My journey with Vue'},
+                    {id: '2', title: '66 Blogging with Vue'},
+                    {id: '3', title: '66 Why Vue is so fun'}
+                ],
+                postsFontSize: 1
             }
         },
     }
