@@ -5,6 +5,7 @@
 <script>
     export default {
         name: "propTransmitData01",
+        // 定义组件要接收的参数
         props: {
             msg: String
         },
