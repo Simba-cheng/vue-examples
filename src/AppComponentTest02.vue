@@ -8,17 +8,27 @@
     <div>
         <custom-components01 @submit="getChild"></custom-components01>
     </div>
+
+    <p></p>
+
+    <!--插入内容占位符-->
+    <div id="slots-demo" class="demo">
+        <slotComponent>Something bad happened.</slotComponent>
+    </div>
+
 </template>
 
 <script>
     import datePicker from "@/components/childComponents02/DatePicker.vue";
     import customComponents01 from "@/components/childComponents02/customComponents01.vue";
+    import slotComponent from "@/components/childComponents02/SlotComponent.vue";
 
     export default {
         name: "appComponentTest02",
         components: {
             datePicker,
-            customComponents01
+            customComponents01,
+            slotComponent
         },
         methods: {
             getChild(data) {
@@ -30,4 +40,14 @@
 
 <style scoped>
 
+    .demo {
+        font-family: sans-serif;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        padding: 20px 30px;
+        margin-top: 1em;
+        margin-bottom: 40px;
+        user-select: none;
+        overflow-x: auto;
+    }
 </style>
