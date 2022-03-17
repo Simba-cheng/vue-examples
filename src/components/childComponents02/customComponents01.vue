@@ -21,6 +21,7 @@
         //    }
         //},
         emits: {
+            //校验不通过，父组件仍会执行
             submit: ({username, password}) => {
                 if (username && password) {
                     console.info("username: " + username + ",password: " + password)
