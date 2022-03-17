@@ -21,7 +21,7 @@
             <!--<prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
                                   @enlarge-text="postsFontSize+=0.1"></prop-transmit-data04>-->
 
-            <!--1.使用时间抛出一个值-->
+            <!--1.使用事件抛出一个值-->
             <prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
                                   @enlarge-text="postsFontSize+=$event"></prop-transmit-data04>
         </div>

@@ -9,11 +9,6 @@
         props: {
             msg: String
         },
-        data() {
-            return {
-                message: 'simba'
-            }
-        },
     }
 </script>
 
