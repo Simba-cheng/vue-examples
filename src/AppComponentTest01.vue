@@ -35,7 +35,10 @@
     <p></p>
 
     <div>
-        <prop-transmit-data05 author="{firstname:'simba',lastname:'Cheng'}"></prop-transmit-data05>
+        <prop-transmit-data05
+                author="{firstname:'simba',lastname:'Cheng'}"
+                title="我是标题呢"
+        ></prop-transmit-data05>
     </div>
 
 
