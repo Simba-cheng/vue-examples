@@ -45,6 +45,19 @@
         <prop-transmit-data06 title="哦哦好的呢"></prop-transmit-data06>
     </div>
 
+    <!--插入内容占位符-->
+    <div id="slots-demo" class="demo">
+        <slotComponent>Something bad happened.</slotComponent>
+    </div>
+
+    <div>
+        <date-picker @run-parent="getChild"></date-picker>
+    </div>
+    <p></p>
+    <div>
+        <custom-components01 @submit="getChild"></custom-components01>
+    </div>
+
 </template>
 
 <script>
@@ -55,6 +68,9 @@
     import propTransmitData04 from "@/components/PropTransmitData04.vue";
     import propTransmitData05 from "@/components/PropTransmitData05.vue";
     import propTransmitData06 from "@/components/PropTransmitData06.vue";
+    import slotComponent from "@/components/SlotComponent.vue";
+    import datePicker from "@/components/DatePicker.vue";
+    import customComponents01 from "@/components/customComponents01.vue";
 
     export default {
         name: 'App',
@@ -67,7 +83,11 @@
             propTransmitData03,
             propTransmitData04,
             propTransmitData05,
-            propTransmitData06
+            propTransmitData06,
+            datePicker,
+            customComponents01,
+            // 占位符
+            slotComponent
         },
         data() {
             return {
@@ -87,6 +107,9 @@
         methods: {
             onEnlargeText(enlargeAmount) {
                 this.postsFontSize += enlargeAmount;
+            },
+            getChild(data) {
+                console.log("data -- :" + data.username + " " + data.password)
             },
         }
     }
