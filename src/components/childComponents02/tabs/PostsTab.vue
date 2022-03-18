@@ -1,5 +1,5 @@
 <template>
-    <div class="demo-tab">Posts component</div>
+    <div class="demo-tab">Posts component tab</div>
 </template>
 
 <script>

@@ -16,19 +16,27 @@
         <slotComponent>Something bad happened.</slotComponent>
     </div>
 
+    <p></p>
+
+    <div>
+        <dynamic-component></dynamic-component>
+    </div>
+
 </template>
 
 <script>
     import datePicker from "@/components/childComponents02/DatePicker.vue";
     import customComponents01 from "@/components/childComponents02/customComponents01.vue";
     import slotComponent from "@/components/childComponents02/SlotComponent.vue";
+    import dynamicComponent from "@/components/childComponents02/DynamicComponent.vue";
 
     export default {
         name: "appComponentTest02",
         components: {
             datePicker,
             customComponents01,
-            slotComponent
+            slotComponent,
+            dynamicComponent
         },
         methods: {
             getChild(data) {

@@ -1,5 +1,5 @@
 <template>
-    <div class="demo-tab">Home component</div>
+    <div class="demo-tab">Home component tab</div>
 </template>
 
 <script>
