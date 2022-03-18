@@ -32,6 +32,13 @@
         </div>
     </div>
 
+    <p></p>
+
+    <div>
+        <prop-transmit-data05 author="{firstname:'simba',lastname:'Cheng'}"></prop-transmit-data05>
+    </div>
+
+
 </template>
 
 <script>
@@ -41,6 +48,7 @@
     import propTransmitData02 from "@/components/childComponents01/PropTransmitData02.vue";
     import propTransmitData03 from "@/components/childComponents01/PropTransmitData03.vue";
     import propTransmitData04 from "@/components/childComponents01/PropTransmitData04.vue";
+    import propTransmitData05 from "@/components/childComponents01/PropTransmitData05.vue";
 
     export default {
         name: 'appComponentTest01',
@@ -53,7 +61,8 @@
             propTransmitData01,
             propTransmitData02,
             propTransmitData03,
-            propTransmitData04
+            propTransmitData04,
+            propTransmitData05
         },
         data() {
             return {
