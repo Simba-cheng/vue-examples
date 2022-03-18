@@ -13,12 +13,7 @@
             }
         },
         setup(props) {
-            console.info(props)
             console.info(props.author)
-
-            //const author = props.author;
-            //console.log('firstname: ' + author.firstname + ' lastname: ' + author.lastname)
-
             console.info(props.title);
         },
     }

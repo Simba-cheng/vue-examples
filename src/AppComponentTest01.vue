@@ -28,7 +28,6 @@
             <!--2.接收从子组件传递的参数,并将其传入绑定的函数-->
             <prop-transmit-data04 v-for="post in posts" :key="post.id" :title="post.title"
                                   @enlarge-text="onEnlargeText"></prop-transmit-data04>
-
         </div>
     </div>
 
@@ -39,6 +38,12 @@
                 author="{firstname:'simba',lastname:'Cheng'}"
                 title="我是标题呢"
         ></prop-transmit-data05>
+    </div>
+
+    <!--组件传参校验-->
+    <div>
+        <!--<prop-transmit-data06 title="你觉得呢JSPang"></prop-transmit-data06>-->
+        <prop-transmit-data06 title="哦哦好的呢"></prop-transmit-data06>
     </div>
 
 
@@ -52,6 +57,7 @@
     import propTransmitData03 from "@/components/childComponents01/PropTransmitData03.vue";
     import propTransmitData04 from "@/components/childComponents01/PropTransmitData04.vue";
     import propTransmitData05 from "@/components/childComponents01/PropTransmitData05.vue";
+    import propTransmitData06 from "@/components/childComponents01/PropTransmitData06.vue";
 
     export default {
         name: 'appComponentTest01',
@@ -65,7 +71,8 @@
             propTransmitData02,
             propTransmitData03,
             propTransmitData04,
-            propTransmitData05
+            propTransmitData05,
+            propTransmitData06
         },
         data() {
             return {
