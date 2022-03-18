@@ -18,8 +18,15 @@
 
     <p></p>
 
+    <!--动态组件-->
     <div>
         <dynamic-component></dynamic-component>
+    </div>
+
+    <p></p>
+
+    <div>
+        <dynamic-component2></dynamic-component2>
     </div>
 
 </template>
@@ -29,6 +36,7 @@
     import customComponents01 from "@/components/childComponents02/customComponents01.vue";
     import slotComponent from "@/components/childComponents02/SlotComponent.vue";
     import dynamicComponent from "@/components/childComponents02/DynamicComponent.vue";
+    import dynamicComponent2 from "@/components/childComponents02/DynamicComponent2.vue";
 
     export default {
         name: "appComponentTest02",
@@ -36,7 +44,8 @@
             datePicker,
             customComponents01,
             slotComponent,
-            dynamicComponent
+            dynamicComponent,
+            dynamicComponent2
         },
         methods: {
             getChild(data) {

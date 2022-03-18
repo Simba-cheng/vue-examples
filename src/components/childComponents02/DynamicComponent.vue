@@ -2,7 +2,7 @@
     <div id="app">
         <div class="top">
             <!--放置tab点击标签-->
-            <div class="card" :class="{highLight:whichIndex === index}" v-for="(item,index) in cardArr"
+            <div class="cardClass" :class="{highLight:whichIndex === index}" v-for="(item,index) in cardArr"
                  :key="index" @click="whichIndex = index;componentId = item.componentId">
                 {{ item.componentName }}
             </div>
@@ -47,6 +47,14 @@
 </script>
 
 <style>
+
+    #app {
+        width: 60%;
+        height: 50vh;
+        box-sizing: border-box;
+        padding: 50px;
+    }
+
     .top {
         width: 100%;
         height: 80px;
@@ -54,7 +62,7 @@
         justify-content: space-around;
     }
 
-    .crad {
+    .cardClass {
         width: 20%;
         height: 80px;
         line-height: 80px;
