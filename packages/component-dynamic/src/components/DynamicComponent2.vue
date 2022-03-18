@@ -15,9 +15,9 @@
 
 <script>
 
-    import archiveTab from "@/components/childComponents02/tabs/ArchiveTab.vue";
-    import helloTab from "@/components/childComponents02/tabs/HelloTab.vue";
-    import postsTab from "@/components/childComponents02/tabs/PostsTab.vue";
+    import archiveTab from "@/components/tabs/ArchiveTab.vue";
+    import helloTab from "@/components/tabs/HelloTab.vue";
+    import postsTab from "@/components/tabs/PostsTab.vue";
 
     export default {
         name: "dynamicComponent2",

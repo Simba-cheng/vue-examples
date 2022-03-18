@@ -1,9 +1,10 @@
 {
-  "name": "vue_examples",
+  "name": "component-dynamic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "vue-examples-serve": "vue-cli-service serve",
+    "component-dynamic-serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
