@@ -45,20 +45,19 @@
         <prop-transmit-data06 title="哦哦好的呢"></prop-transmit-data06>
     </div>
 
-
 </template>
 
 <script>
-    import simpleComponent01 from "@/components/childComponents01/SimpleComponent01.vue";
-    import propTransmitData01 from "@/components/childComponents01/PropTransmitData01.vue";
-    import propTransmitData02 from "@/components/childComponents01/PropTransmitData02.vue";
-    import propTransmitData03 from "@/components/childComponents01/PropTransmitData03.vue";
-    import propTransmitData04 from "@/components/childComponents01/PropTransmitData04.vue";
-    import propTransmitData05 from "@/components/childComponents01/PropTransmitData05.vue";
-    import propTransmitData06 from "@/components/childComponents01/PropTransmitData06.vue";
+    import simpleComponent01 from "@/components/SimpleComponent01.vue";
+    import propTransmitData01 from "@/components/PropTransmitData01.vue";
+    import propTransmitData02 from "@/components/PropTransmitData02.vue";
+    import propTransmitData03 from "@/components/PropTransmitData03.vue";
+    import propTransmitData04 from "@/components/PropTransmitData04.vue";
+    import propTransmitData05 from "@/components/PropTransmitData05.vue";
+    import propTransmitData06 from "@/components/PropTransmitData06.vue";
 
     export default {
-        name: 'appComponentTest01',
+        name: 'App',
         components: {
             // 组件简单示例
             simpleComponent01,
