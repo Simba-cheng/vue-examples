@@ -17,6 +17,9 @@
     </div>
 </template>
 
+<!--
+    https://juejin.cn/post/6957696034449391646
+-->
 <script>
     import helloTab from "@/components/childComponents02/tabs/HelloTab.vue";
     import postsTab from "@/components/childComponents02/tabs/PostsTab.vue";
