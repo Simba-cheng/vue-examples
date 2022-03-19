@@ -1,14 +1,19 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <div id="app">
+        <img alt="Vue logo" src="./assets/logo.png">
 
-    <!--路由内置组件-->
-    <router-link to="{name:'H'}">首页</router-link>
-    <router-link to="{name:'L'}">列表</router-link>
-    <router-link to="{name:'UI'}">用户中心</router-link>
-    <br/>
+        <!--路由内置组件-->
+        <!--<router-link to="{name:'H'}">【首页】</router-link>
+        <router-link to="{name:'L'}">【列表】</router-link>
+        <router-link to="{name:'UI'}">【用户中心】</router-link>-->
+        <router-link to="/">【首页】</router-link>
+        <router-link to="/list">【列表】</router-link>
+        <router-link to="/user">【用户中心】</router-link>
+        <br/>
 
-    <!--展示组件内容-->
-    <router-view></router-view>
+        <!--展示组件内容-->
+        <router-view></router-view>
+    </div>
 </template>
 
 <!--
