@@ -1,14 +1,14 @@
 <template>
     <div class="user">
         <div class="left">
-            <!--<router-link to="{name:'UI'}">用户信息</router-link>
-            <router-link to="{name:'UPWD'}">修改密码</router-link>
-            <router-link to="{name:'UOrder'}">我的订单</router-link>
-            <router-link to="{name:'UScore'}" 我的积分></router-link>-->
-            <router-link to="/info">用户信息</router-link>
+            <router-link :to="{name:'UI'}">用户信息</router-link>
+            <router-link :to="{name:'UPWD'}">修改密码</router-link>
+            <router-link :to="{name:'UOrder'}">我的订单</router-link>
+            <router-link :to="{name:'UScore'}" 我的积分></router-link>
+            <!--<router-link to="/info">用户信息</router-link>
             <router-link to="/pwd">修改密码</router-link>
             <router-link to="/orders">我的订单</router-link>
-            <router-link to="/score" 我的积分></router-link>
+            <router-link to="/score" 我的积分></router-link>-->
         </div>
         <div class="right">
             <router-view></router-view>
