@@ -3,9 +3,10 @@
         <h1>我是列表页</h1>
         <ul>
             <li v-for="item in list" :key="item.id">
-                <router-link to="{name:'Detail',
+                {{ item.id }} - {{ item.name }}
+                <!--<router-link to="{name:'Detail',
                 query:{id:item.id,name:item:name,r:Math.random()}},params:{p:'小智',age:18,skills:'暂无'}"
-                ></router-link>
+                ></router-link>-->
             </li>
         </ul>
     </div>
