@@ -17,6 +17,10 @@
             <router-link to="/users/3">go to user3</router-link>
         </p>
 
+        <div v-for="item in user_document_ids" :key="item.id">
+            <router-link :to="/users/+item.id">go to user item - {{ item.id }}</router-link>
+        </div>
+
         <!--用于放置路由映射对应的页面-->
         <router-view></router-view>
     </div>
@@ -27,8 +31,16 @@
 
     export default {
         name: 'App',
-        components: {
-        }
+        components: {},
+        data() {
+            return {
+                user_document_ids: [
+                    {id: '1123noin1', name: 'aaa'},
+                    {id: 'asbdi12390', name: 'bbb'},
+                    {id: '78asdbiusvd', name: 'ccc'}
+                ]
+            }
+        },
     }
 
 </script>
