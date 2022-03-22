@@ -3,11 +3,14 @@
     监听数据变化，并更新数据
 -->
 <template>
+
+    <!--文本框-->
     <div>
         <input type="text" v-model="myValue"><br>
         <textarea name="" id="" cols="10" rows="2" v-model="myValue"></textarea>
     </div>
 
+    <!--多选-->
     <div>
         <ol>
             <li v-for="user in users" :key="user.name">
@@ -22,6 +25,7 @@
 
     <p></p>
 
+    <!--单选-->
     <div>
         <select v-model="selected">
             <option v-for="user in users" :key="user.name">{{ user.name }}</option>
