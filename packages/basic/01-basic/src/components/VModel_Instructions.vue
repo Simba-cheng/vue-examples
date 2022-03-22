@@ -20,6 +20,15 @@
         </div>
     </div>
 
+    <p></p>
+
+    <div>
+        <select v-model="selected">
+            <option v-for="user in users" :key="user.name">{{ user.name }}</option>
+        </select>
+        <div>{{ selected }}</div>
+    </div>
+
 </template>
 
 <script>
@@ -29,6 +38,7 @@
         name: "vModel_Instructions",
         setup() {
 
+            const selected = ref();
             const checkedNames = ref([]);
             const users = ref([
                 {name: '程咬金', checked: false},
@@ -41,6 +51,7 @@
             const myValue = ref('9527')
 
             return {
+                selected,
                 checkedNames,
                 users,
                 myValue,
