@@ -1,4 +1,23 @@
+<!--
+    v-text 指令
+-->
 <template>
+
+    <!--
+        显示文本的两种方式
+        1.双大括号(Mustache语法)
+        2.'v-text'指令
+    -->
+    <div>
+        <span>{{ myTitle }}</span><br>
+        <span v-text="myTitle"></span><br>
+    </div>
+
+    <div>
+        <h4>{{ myTitle2 }}</h4>
+        <h4 v-text="myTitle2"></h4>
+    </div>
+
     <div>
         <p>剩余空间: {{ spaceLeft }} out of {{ capacity }}</p>
         <h2>Attending</h2>
@@ -17,6 +36,7 @@
 
         setup() {
 
+            const myTitle2 = ref(['hello 9527']);
             const capacity = ref(4);
             const attending = ref(['Tim', 'Bob', 'Joe']);
 
@@ -35,7 +55,13 @@
                 capacity,
                 attending,
                 spaceLeft,
-                increaseCapacity
+                increaseCapacity,
+                myTitle2
+            }
+        },
+        data() {
+            return {
+                myTitle: '嘿嘿嘿,我是标题'
             }
         },
     }

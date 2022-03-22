@@ -1,7 +1,4 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-
     <div id="basic01">
         <basic01></basic01>
     </div>
@@ -10,12 +7,12 @@
 
 <script>
 
-    import basic01 from "@/components/basic01.vue";
+    import basic01 from "@/components/vText_instructions.vue";
 
     export default {
         name: 'App',
         components: {
-            basic01
+            basic01,
         }
     }
 </script>
