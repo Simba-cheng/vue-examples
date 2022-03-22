@@ -1,18 +1,24 @@
 <template>
-    <div id="basic01">
-        <basic01></basic01>
+    <div id="vText_Instructions">
+        <vText_Instructions></vText_Instructions>
+    </div>
+
+    <div id="custom_Instructions">
+        <custom_Instructions></custom_Instructions>
     </div>
 
 </template>
 
 <script>
 
-    import basic01 from "@/components/vText_instructions.vue";
+    import vText_Instructions from "@/components/VText_Instructions.vue";
+    import custom_Instructions from "@/components/Custom_Instructions.vue";
 
     export default {
         name: 'App',
         components: {
-            basic01,
+            vText_Instructions,
+            custom_Instructions
         }
     }
 </script>
