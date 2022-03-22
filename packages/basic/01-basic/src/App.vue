@@ -15,6 +15,10 @@
         <vON_Instructions></vON_Instructions>
     </div>
 
+    <div id="vModel_Instructions">
+        <vModel_Instructions></vModel_Instructions>
+    </div>
+
 </template>
 
 <script>
@@ -23,6 +27,7 @@
     import custom_Instructions from "@/components/Custom_Instructions.vue";
     import vFor_Instructions from "@/components/VFor_Instructions.vue";
     import vON_Instructions from "@/components/VON_Instructions.vue";
+    import vModel_Instructions from "@/components/VModel_Instructions.vue";
 
     export default {
         name: 'App',
@@ -43,7 +48,12 @@
             /*
                 v-on指令
              */
-            vON_Instructions
+            vON_Instructions,
+
+            /*
+                v-model指令
+             */
+            vModel_Instructions,
         }
     }
 </script>

@@ -1,3 +1,6 @@
+<!--
+    v-on 绑定事件监听
+-->
 <template>
     <div>
         <span>{{ countData }}</span><br>
