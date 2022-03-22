@@ -7,18 +7,33 @@
         <custom_Instructions></custom_Instructions>
     </div>
 
+    <div id="vFor_Instructions">
+        <vFor_Instructions></vFor_Instructions>
+    </div>
+
 </template>
 
 <script>
 
     import vText_Instructions from "@/components/VText_Instructions.vue";
     import custom_Instructions from "@/components/Custom_Instructions.vue";
+    import vFor_Instructions from "@/components/VFor_Instructions.vue";
 
     export default {
         name: 'App',
         components: {
+
+            /*
+                v-text指令 及 自定义指令
+                https://juejin.cn/post/6991484757259321358
+            */
             vText_Instructions,
-            custom_Instructions
+            custom_Instructions,
+
+            /*
+                v-for指令
+             */
+            vFor_Instructions
         }
     }
 </script>
