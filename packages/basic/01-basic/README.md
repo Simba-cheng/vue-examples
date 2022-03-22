@@ -1,5 +1,12 @@
 # 01-basic
 
+---
+```shell
+npm install vite
+npm install --g vite
+```
+---
+
 ## Project setup
 ```
 npm install
