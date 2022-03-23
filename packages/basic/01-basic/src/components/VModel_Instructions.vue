@@ -37,6 +37,10 @@
         <my-component01 v-model:title="title"></my-component01>
     </div>
 
+    <div>
+        <my-component01 :title="title2" @update:title="title2=$event"></my-component01>
+    </div>
+
 </template>
 
 <script>
@@ -47,7 +51,8 @@
         name: "vModel_Instructions",
         data() {
             return {
-                title:'123'
+                title: '123',
+                title2: '9872'
             }
         },
         setup() {
