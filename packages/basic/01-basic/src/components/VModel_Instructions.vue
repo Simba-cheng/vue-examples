@@ -33,15 +33,24 @@
         <div>{{ selected }}</div>
     </div>
 
+    <div>
+        <my-component01 v-model:title="title"></my-component01>
+    </div>
+
 </template>
 
 <script>
     import {ref} from "vue";
+    import myComponent01 from "@/components/MyComponent01.vue";
 
     export default {
         name: "vModel_Instructions",
+        data() {
+            return {
+                title:'123'
+            }
+        },
         setup() {
-
             const selected = ref();
             const checkedNames = ref([]);
             const users = ref([
@@ -58,9 +67,12 @@
                 selected,
                 checkedNames,
                 users,
-                myValue,
+                myValue
             }
         },
+        components: {
+            myComponent01
+        }
     }
 </script>
 
