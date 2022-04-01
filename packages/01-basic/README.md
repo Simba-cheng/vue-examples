@@ -1,4 +1,4 @@
-# 01-watch
+# 01-basic
 
 ## Project setup
 ```
