@@ -11,19 +11,25 @@
     <conditionalsLoops01></conditionalsLoops01>
   </div>
 
+  <div id="formBind01">
+    <formBind01></formBind01>
+  </div>
+
 </template>
 
 <script>
   import introduction01 from '@/components/introduction-01'
   import attributeBind01 from '@/components/attribute-bind-01'
   import conditionalsLoops01 from '@/components/conditionals-loops-01'
+  import formBind01 from '@/components/form-bind-01'
 
   export default {
     name: 'App',
     components: {
       introduction01,
       attributeBind01,
-      conditionalsLoops01
+      conditionalsLoops01,
+      formBind01
     }
   }
 </script>
