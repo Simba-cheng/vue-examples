@@ -27,6 +27,7 @@
   <div id="computed01">
     <computed01></computed01>
   </div>
+  <p></p>
 
 </template>
 
@@ -35,7 +36,7 @@
   import attributeBind01 from '@/components/attribute-bind-01'
   import conditionalsLoops01 from '@/components/conditionals-loops-01'
   import formBind01 from '@/components/form-bind-01'
-  import simpleComponents01 from '@/components/Simple-Components-01'
+  import simpleComponents01 from '@/components/simple-Components-01'
   import computed01 from '@/components/computed-01'
 
   export default {
