@@ -1,14 +1,23 @@
 <template>
-  <introduction01></introduction01>
+  <div id="introduction01">
+    <introduction01></introduction01>
+  </div>
+
+  <div id="attributeBind01">
+    <attributeBind01></attributeBind01>
+  </div>
+
 </template>
 
 <script>
   import introduction01 from '@/components/introduction-01'
+  import attributeBind01 from '@/components/attribute-bind-01'
 
   export default {
     name: 'App',
     components: {
-      introduction01
+      introduction01,
+      attributeBind01
     }
   }
 </script>
