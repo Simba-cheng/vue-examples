@@ -7,17 +7,23 @@
     <attributeBind01></attributeBind01>
   </div>
 
+  <div id="conditionalsLoops01">
+    <conditionalsLoops01></conditionalsLoops01>
+  </div>
+
 </template>
 
 <script>
   import introduction01 from '@/components/introduction-01'
   import attributeBind01 from '@/components/attribute-bind-01'
+  import conditionalsLoops01 from '@/components/conditionals-loops-01'
 
   export default {
     name: 'App',
     components: {
       introduction01,
-      attributeBind01
+      attributeBind01,
+      conditionalsLoops01
     }
   }
 </script>
