@@ -2,17 +2,25 @@
   <div id="introduction01">
     <introduction01></introduction01>
   </div>
+  <p></p>
 
   <div id="attributeBind01">
     <attributeBind01></attributeBind01>
   </div>
+  <p></p>
 
   <div id="conditionalsLoops01">
     <conditionalsLoops01></conditionalsLoops01>
   </div>
+  <p></p>
 
   <div id="formBind01">
     <formBind01></formBind01>
+  </div>
+  <p></p>
+
+  <div id="simpleComponents01">
+    <simpleComponents01></simpleComponents01>
   </div>
 
 </template>
@@ -22,6 +30,7 @@
   import attributeBind01 from '@/components/attribute-bind-01'
   import conditionalsLoops01 from '@/components/conditionals-loops-01'
   import formBind01 from '@/components/form-bind-01'
+  import simpleComponents01 from '@/components/Simple-Components-01'
 
   export default {
     name: 'App',
@@ -29,7 +38,8 @@
       introduction01,
       attributeBind01,
       conditionalsLoops01,
-      formBind01
+      formBind01,
+      simpleComponents01
     }
   }
 </script>
