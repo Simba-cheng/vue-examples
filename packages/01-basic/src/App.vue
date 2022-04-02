@@ -1,17 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-
-  <basic-introduction01></basic-introduction01>
-
+  <introduction01></introduction01>
 </template>
 
 <script>
-  import basicIntroduction01 from '@/components/basic-introduction-01'
+  import introduction01 from '@/components/introduction-01'
 
   export default {
     name: 'App',
     components: {
-      basicIntroduction01
+      introduction01
     }
   }
 </script>
