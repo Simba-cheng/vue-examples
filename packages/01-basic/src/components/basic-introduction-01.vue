@@ -15,6 +15,30 @@
   <!--点击弹窗-->
   <span @click.prevent="notify">点击弹窗</span>
 
+  <!--定时任务,每秒递增-->
+  <div id="counter">
+    Counter:{{ counter }}
+  </div>
+
+  <!--鼠标悬停-->
+  <div id="bind-attribute">
+    <span v-bind:title="bindAttributeMessage">
+      鼠标悬停几秒钟查看动态绑定提示信息
+    </span>
+  </div>
+
+  <!--数据双向绑定-->
+  <div id="two-way-binding">
+    <span>{{ twoWayBindingMessage }}</span><br>
+    <input type="text" v-model="twoWayBindingMessage"/>
+  </div>
+
+  <!--条件判断-->
+  <div id="conditional-rendering">
+    <span v-if="seen">你能看到我么？</span><br>
+    <button @click="seen = !seen">显示或者隐藏</button>
+  </div>
+
 </template>
 
 <script>
@@ -22,8 +46,17 @@
     name: 'basic-introduction-01',
     data() {
       return {
-        message: '我是message'
+        message: '我是message',
+        counter: 0,
+        bindAttributeMessage: '当前时间：' + new Date().toLocaleTimeString(),
+        twoWayBindingMessage: '你好呀....',
+        seen: true
       }
+    },
+    mounted() {
+      setInterval(() => {
+        this.counter++
+      }, 1000)
     },
     methods: {
       reverseMessage() {
