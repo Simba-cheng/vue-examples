@@ -39,6 +39,15 @@
     <button @click="seen = !seen">显示或者隐藏</button>
   </div>
 
+  <!--列表-->
+  <div id="list-rendering">
+    <ol>
+      <li v-for="book in books" :key="book.id">
+        {{ book.name }}
+      </li>
+    </ol>
+  </div>
+
 </template>
 
 <script>
@@ -50,7 +59,12 @@
         counter: 0,
         bindAttributeMessage: '当前时间：' + new Date().toLocaleTimeString(),
         twoWayBindingMessage: '你好呀....',
-        seen: true
+        seen: true,
+        books: [
+          {id: '1', name: '雾都孤儿'},
+          {id: '2', name: '悲惨世界'},
+          {id: '3', name: '海底两万里'}
+        ]
       }
     },
     mounted() {
