@@ -22,6 +22,11 @@
   <div id="simpleComponents01">
     <simpleComponents01></simpleComponents01>
   </div>
+  <p></p>
+
+  <div id="computed01">
+    <computed01></computed01>
+  </div>
 
 </template>
 
@@ -31,6 +36,7 @@
   import conditionalsLoops01 from '@/components/conditionals-loops-01'
   import formBind01 from '@/components/form-bind-01'
   import simpleComponents01 from '@/components/Simple-Components-01'
+  import computed01 from '@/components/computed-01'
 
   export default {
     name: 'App',
@@ -39,7 +45,8 @@
       attributeBind01,
       conditionalsLoops01,
       formBind01,
-      simpleComponents01
+      simpleComponents01,
+      computed01
     }
   }
 </script>
