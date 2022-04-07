@@ -1,9 +1,9 @@
 {
-  "name": "01-container",
+  "name": "02-container",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "01-container-serve": "vue-cli-service serve",
+    "02-container-serve": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
