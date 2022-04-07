@@ -2,35 +2,38 @@
 
   <div class="common-layout">
 
-    <el-container style="height: 100%" direction="vertical">
-      <el-header>Header</el-header>
+    <!--
+      direction：子元素的排列方向
+    -->
+<!--    <el-container style="height: 100%" direction="vertical">
+      <el-header height="10%">Header</el-header>
       <el-main>Main</el-main>
     </el-container>
-    <p></p>
+    <p></p>-->
 
-    <el-container style="height: 100%">
+<!--    <el-container style="height: 100%">
       <el-header>Header</el-header>
       <el-main>Main</el-main>
       <el-footer>Footer</el-footer>
     </el-container>
-    <p></p>
+    <p></p>-->
 
-    <el-container style="height: 100%">
+<!--    <el-container style="height: 100%">
       <el-aside width="200px">Aside</el-aside>
       <el-main>Main</el-main>
     </el-container>
-    <p></p>
+    <p></p>-->
 
-    <el-container style="height: 100%">
+<!--    <el-container style="height: 100%">
       <el-header>Header</el-header>
       <el-container>
         <el-aside width="200px">Aside</el-aside>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
-    <p></p>
+    <p></p>-->
 
-    <el-container style="height: 100%">
+<!--    <el-container style="height: 100%">
       <el-header>Header</el-header>
       <el-container>
         <el-aside width="200px">Aside</el-aside>
@@ -40,23 +43,23 @@
         </el-container>
       </el-container>
     </el-container>
-    <p></p>
+    <p></p>-->
 
-    <el-container style="height: 100%">
+<!--    <el-container style="height: 100%">
       <el-aside width="200px">Aside</el-aside>
       <el-container>
         <el-header>Header</el-header>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
-    <p></p>
+    <p></p>-->
 
     <el-container style="height: 100%">
-      <el-aside width="200px">Aside</el-aside>
+      <el-aside width="15%">Aside</el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header height="8%">Header</el-header>
         <el-main>Main</el-main>
-        <el-footer>Footer</el-footer>
+        <el-footer height="8%">Footer</el-footer>
       </el-container>
     </el-container>
 
