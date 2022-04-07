@@ -7,6 +7,7 @@
   <div>
     <!--<commonLayout01></commonLayout01>-->
     <!--<commonLayout02></commonLayout02>-->
+    <commonLayout03></commonLayout03>
   </div>
 </template>
 
@@ -14,12 +15,14 @@
 
 //  import commonLayout01 from '@/components/commonLayout01'
 //  import commonLayout02 from '@/components/commonLayout02'
+  import commonLayout03 from '@/components/commonLayout03'
 
   export default {
     name: 'App',
     components: {
-    //      commonLayout01,
-    //      commonLayout02
+      //      commonLayout01,
+      //      commonLayout02,
+      commonLayout03
     }
   }
 </script>
