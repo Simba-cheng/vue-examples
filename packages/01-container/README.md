@@ -1,5 +1,9 @@
 # 01-container
 
+```shell
+yarn add element-plus
+```
+
 ## Project setup
 ```
 npm install
