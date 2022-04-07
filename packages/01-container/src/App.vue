@@ -4,7 +4,7 @@
   https://element-plus.gitee.io/zh-CN/component/container.html#%E5%B8%B8%E8%A7%81%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80
 -->
 <template>
-  <div>
+  <div id="commonLayoutApp">
     <!--<commonLayout01></commonLayout01>-->
     <commonLayout02></commonLayout02>
     <!--<commonLayout03></commonLayout03>-->
@@ -28,6 +28,12 @@
 </script>
 
 <style>
+
+#commonLayoutApp {
+  height: 100%;
+  width: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
