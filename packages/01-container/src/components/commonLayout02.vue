@@ -1,7 +1,8 @@
 <template>
 
   <div class="common-layout">
-    <el-container>
+
+    <el-container style="height: 100%" direction="vertical">
       <el-header>Header</el-header>
       <el-main>Main</el-main>
     </el-container>
@@ -58,6 +59,7 @@
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>
+
   </div>
 
 </template>
@@ -69,6 +71,12 @@
 </script>
 
 <style scoped>
+
+.common-layout {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
 
 .el-header,
 .el-footer {
