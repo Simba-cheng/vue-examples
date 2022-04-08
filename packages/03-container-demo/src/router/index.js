@@ -1,17 +1,22 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import about from '@/components/test/about'
-//import home from '@/components/test/home'
 import layout from '@/layout'
+import login from '@/views/login'
 
 const routers = [
+    {
+        path: '/',
+        redirect: '/home', // 重定向
+        component: layout
+    },
     {
         path: '/home',
         component: layout
     },
-//    {
-//        path: '/home',
-//        component: home
-//    },
+    {
+        path: '/login',
+        component: login
+    },
     {
         path: '/about',
         component: about
