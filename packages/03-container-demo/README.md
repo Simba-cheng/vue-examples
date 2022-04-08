@@ -28,3 +28,14 @@ yarn add vuex@next --save
 专为Vue开发的状态管理库，采用集中式存储管理应用的所有组件的状态
 
 [vuex 官方文档](https://vuex.vuejs.org/zh/)
+
+### sass-loader
+```shell
+yarn add sass-loader
+```
+
+### node-sass 
+
+```shell
+yarn add node-sass
+```
